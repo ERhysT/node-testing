@@ -12,9 +12,10 @@ morgan.token('body', (req, res) => {
 })
 
 const app = express()
-app.use(cors())
+//app.use(cors())
 app.use(express.json())
-app.use(morgan('method: :url :status :body'))
+app.use(express.static('dist'))
+app.use(morgan(':method :url :status :body'))
 
 
 
